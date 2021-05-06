@@ -1,0 +1,16 @@
+logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %clr(%5p) %clr(-){faint} %clr(%-80.80logger{79}){cyan} %clr(:) %m%n"
+
+server:
+  port: 9999
+
+spring:
+  application:
+    name: testConfigServer
+
+  cloud:
+    config:
+      server:
+        git: #仓库地址
+          uri: https://github.com/ttyout/GitTest.git
