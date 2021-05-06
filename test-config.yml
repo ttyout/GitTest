@@ -1,19 +1,20 @@
-eureka:
-  client:
-    fetchRegistry: true
-    registerWithEureka: true
-    serviceUrl:
-      defaultZone: http://eureka1:3001/eureka,http://eureka2:3002/eureka
-  instance:
-    hostname: eureka
-    prefer-ip-address: false
-  server:
-    enable-self-preservation: false
-    eviction-interval-timer-in-ms: 4000
-server:
-  port: 1000
 spring:
-  application:
-    name: eurekaServer
   profiles:
     active: dev
+
+---
+#开发环境配置
+spring:
+  profiles: dev
+
+server:
+  port: 1000
+
+
+---
+#测试环境配置
+spring:
+  profiles: stg
+
+server:
+  port: 1001
