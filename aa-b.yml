@@ -1,3 +1,12 @@
 spring:
   application:
     name: consume-user #此实例注册到eureka服务端的name
+
+feign:
+  hystrix:
+    enabled: true # 开启Feign的熔断功能
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
